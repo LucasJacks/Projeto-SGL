@@ -112,3 +112,17 @@ create table operacoes (
 );
 
 
+/*=============== TABELA LOG ============================================================================================*/
+
+
+create table LOG (
+	id serial,
+	dataHora DATE not null,
+	id_operação_fk INTEGER NOT NULL,
+	descricao VARCHAR(500),
+	id_usuario_fk INTEGER NOT NULL,
+	nomeTabela varchar (150) NOT NULL,
+	primary key (id),
+	foreign key (id_operacao_fk) references operacoes (id),
+	foreign key (id_usuario_fk) references usuarios (id)
+);
