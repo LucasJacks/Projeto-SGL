@@ -4,7 +4,7 @@ create database selecta;
 /*=============== TABELA CARGOS ============================================================================================*/
 
 
-create table cargos (
+create table CARGOS (
 	id serial,
 	código integer unique not null,
 	descricao varchar(50) unique not null,
@@ -18,7 +18,7 @@ insert into cargos values
 	(DEFAULT,'04','Caixa');
 
 
-/*=============== TABELA USUÁRIOS ============================================================================================*/
+/*=============== TABELA RELACIONAL USUÁRIOS ============================================================================================*/
 
 
 create table usuarios (
@@ -58,7 +58,7 @@ insert into unidadeloterica values
 	(DEFAULT,'03','180151894','05312561000140','SELECTA AGÊNCIAS LOTÉRICAS','BPR LOTERIAS E CONVENIÊNCIAS LTDA.','AVENIDA RUDÁ, 907, LOJA 01, ZONA NOVA, CAPÃO DA CANOA, RS, 95555000');
 	
 
-/*=============== TABELA TFL'S ============================================================================================*/
+/*=============== TABELA RELACIONAL TFL'S ============================================================================================*/
 
 
 create table TFL (
@@ -95,7 +95,7 @@ INSERT INTO TipoOperacoes VALUES
 	(DEFAULT,'DESPESA','CRÉDITO');
 
 
-/*=============== TABELA OPERAÇÕES ============================================================================================*/
+/*=============== TABELA RELACIONAL OPERAÇÕES ============================================================================================*/
 
 
 create table operacoes (
@@ -112,7 +112,7 @@ create table operacoes (
 );
 
 
-/*=============== TABELA LOG ============================================================================================*/
+/*=============== TABELA RELACIONAL LOG ============================================================================================*/
 
 
 create table LOG (
@@ -125,4 +125,28 @@ create table LOG (
 	primary key (id),
 	foreign key (id_operacao_fk) references operacoes (id),
 	foreign key (id_usuario_fk) references usuarios (id)
+);
+
+
+/*=============== TABELA PERMISSOES ============================================================================================*/
+
+
+create table PERMISSOES (
+	id serial,
+	permissao VARCHAR(100) NOT NULL UNIQUE,
+	observacao VARCHAR(150),
+	primary key (id)
+);
+
+
+/*=============== TABELA RELACIONAL PERMISSOES ============================================================================================*/
+
+
+create table REL_CARGOS_PERMISSOES (
+	id serial,
+	id_permissao_fk INTEGER NOT NULL,
+	id_cargo_fk INTEGER NOT NULL,
+	primary key (id),
+	foreign key (id_permissao_fk) references PERMISSOES (id),
+	foreign key (id_cargo_fk) references CARGOS (id)
 );
