@@ -9,3 +9,8 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #e6e6e6;
 }
+
+.cabeçalho_tabela {
+    border: 2px;
+    width: auto;
+}
