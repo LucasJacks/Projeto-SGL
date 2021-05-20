@@ -14,6 +14,7 @@ body{
     transform: translate(-50%, -50%);
     background: #004a75;
     text-align: center;
+    border-radius: 25px;
 }
 
 .box h1{
@@ -40,6 +41,7 @@ body{
 .box input[type = "text"]:focus, .box input[type = "password"]:focus {
     width: 250px;
     border-color: white;
+    color: white;
 }
 
 .box input[class = "submit-btn"]{
