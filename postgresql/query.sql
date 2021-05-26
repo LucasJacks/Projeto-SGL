@@ -27,6 +27,7 @@ create table usuarios (
 	senha varchar(20) unique not null,
 	nome varchar(100) not null,
 	cpf integer unique not null,
+	matricula INTEGER UNIQUE NOT NULL,
 	telefone integer unique not null,
 	id_cargo_fk INTEGER UNIQUE NOT NULL 
 	primary key (id),

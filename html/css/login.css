@@ -5,16 +5,29 @@ body{
     font-family: sans-serif;
 }
 
-.box {
+#login-box {
     width: 300px;
     padding: 40px;
-    position: absolute;
+    align-self: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: ;
     background: #004a75;
+    /*position: absolute;*/
+    /*display: block;*/
     text-align: center;
     border-radius: 25px;
+}
+
+.box {
+    /*width: 300px;
+    padding: 40px;*/
+    position: relative;
+    display: inline-block;
+    /*margin-top: 50%;
+    margin-left: 50%;*/
+    text-align: center;
+    
 }
 
 .box h1{
@@ -24,7 +37,6 @@ body{
 }
 
 .box input[type = "text"], .box input[type = "password"]{
-    border 0;
     background: #0068A5;
     display: block;
     margin: 20px auto;
@@ -45,7 +57,6 @@ body{
 }
 
 .box input[class = "submit-btn"]{
-    border 0;
     background: #0068A5;
     display: block;
     margin: 20px auto;
@@ -62,7 +73,6 @@ body{
 }
 
 .box input[class = "submit-btn"]:hover{
-    border 0;
     background: #ff8400;
     display: block;
     margin: 20px auto;
@@ -75,4 +85,10 @@ body{
     border-radius: 50px;
     transition: 0.5s;
     cursor: pointer;
+}
+
+#link-recuperar-senha {
+    display: inline-block;
+    position: relative;
+    color: white;
 }
