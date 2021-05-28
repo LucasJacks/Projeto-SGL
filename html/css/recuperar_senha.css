@@ -1,0 +1,11 @@
+body{
+    font-family: sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #0068A5;
+    width: 100%;
+    height: auto;
+}

@@ -34,6 +34,17 @@ body{
     color: white
 }
 
+/*#login-box-externo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #0068A5;
+    width: 100%;
+    height: auto;
+}*/
+
 #login-box-interno {
     margin-top: 150px;
     margin-bottom: 100px;
